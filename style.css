@@ -1,0 +1,98 @@
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+.container {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 48rem;
+}
+.container #Credit {
+    margin-bottom: 20px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    color: black;
+    font-size: 15px;
+}
+
+#Credit:hover {
+    background-color: blue;
+    color: white;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+a {
+    border-bottom: 2px solid gray;
+}
+.acc a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    font-weight: 400;
+    font-size: 1.15rem;
+}
+.acc a:hover{
+    cursor: pointer;
+    color: #03b5d2;
+}
+.acc a:hover::after {
+    border: 2px solid #03b5d2;
+}
+.acc a::after {
+    font-family: 'ionicons';
+    content: '\f218';
+    position: absolute;
+    float: right;
+    right: 1rem;
+    font-size: 1rem;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 30px;
+    text-align: center;
+}
+.acc a.active::after {
+    font-family: 'ionicons';
+    content: '\f209';
+    color: blue;
+    border: 1px solid blue;
+}
+.acc .content {
+    padding: 0 1rem;
+    max-height: 0;
+    opacity: 0;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+    clear: both;
+    transition: all 0.2s ease 0.15s;
+}
+
+.acc .content.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    transition: all 0.35s ease 0.15s;
+}
